@@ -6,13 +6,8 @@
         <option name="migrated" value="true" />
         <option name="pristineConfig" value="false" />
         <option name="userId" value="c03ad29:18e811f6790:-8000" />
-        <option name="version" value="8.4.1" />
+        <option name="version" value="8.13.2" />
       </MTProjectMetadataState>
-    </option>
-    <option name="titleBarState">
-      <MTProjectTitleBarConfigState>
-        <option name="overrideColor" value="false" />
-      </MTProjectTitleBarConfigState>
     </option>
   </component>
 </project>
