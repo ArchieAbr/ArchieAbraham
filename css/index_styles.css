@@ -52,13 +52,16 @@
     margin: 15px;
 }
 
+
+
 .left{
     left: 0;
 }
 
-.right{
+.right {
     left: 50%;
 }
+
 
 .edu-container img{
     position: absolute;
@@ -83,4 +86,33 @@
     top: 0;
     margin-left: 3px;
     z-index: -1;
+}
+
+.left-arrow{
+    height: 0;
+    width: 0;
+    position: absolute;
+    top: 46px;
+    z-index: 1;
+    border-top: 15px solid transparent;
+    border-bottom: 15px solid transparent;
+    border-left: 15px solid #f1356d;;
+    left: 560px;
+}
+
+.right-arrow {
+
+    height: 0;
+    width: 0;
+    position: absolute;
+    top: 46px;
+    z-index: 1;
+    border-top: 15px solid transparent;
+    border-bottom: 15px solid transparent;
+    border-right: 15px solid #f1356d;;
+    right: 550px;
+}
+
+.edu-container.right .edu-textbox {
+    margin-left: 10px; /* Add some margin to the left of the right-side text box */
 }
