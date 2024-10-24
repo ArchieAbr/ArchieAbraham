@@ -1,0 +1,26 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: Roboto, sans-serif;
+    color: whitesmoke;
+}
+
+body{
+    font-family: 'Roboto', sans-serif;
+    background: radial-gradient(circle at 10% 20%, rgb(0, 0, 0) 0%, rgb(64, 64, 64) 90.2%);
+}
+
+.contact-container {
+    height: 100vh;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.contact-form{
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    gap: 20px;
+}
