@@ -94,16 +94,39 @@ body {
     }
 }
 
-/* Keep the initial hidden state */
 .contact-container {
     opacity: 0;
     transform: translateY(100%);
     transition: opacity 0.5s ease, transform 0.5s ease;
 }
 
-/* Apply the animation on page load */
 .contact-container.visible {
     animation: slideIn 1s forwards;
     opacity: 1;
     transform: translateY(0);
 }
+
+.social-media-icons {
+    display: flex;
+    justify-content: center;  /* Center the icons horizontally */
+    align-items: center;      /* Align the icons vertically */
+    gap: 10px;                /* Reduce the space between the icons */
+    margin-top: 20px;         /* Optional: Add space above the icons */
+}
+
+.icon-container {
+    display: flex;
+    justify-content: center;  /* Center the icons in their containers */
+    align-items: center;      /* Vertically center */
+    width: 60px;              /* Icon container size */
+    height: 60px;             /* Icon container size */
+    padding: 5px;
+    border-radius: 50%;       /* Keep the icon container circular */
+    background-color: white;  /* Background color of the circle */
+}
+
+.In-icon, .indeed-icon {
+    width: 200px;              /* Size of the icons */
+    height: auto;             /* Keep the aspect ratio */
+}
+
