@@ -12,7 +12,6 @@
     <a href="contact_me.html">Get in Touch</a>
     <a href="projects.html">Projects</a>
 </div>
-<h1>Contact Me</h1>
 
 <!-- div container to style the form -->
 <div class="contact-container">
@@ -26,6 +25,8 @@
         <input type="text" id="name" name="name" placeholder="Your Full Name" class="contact-inputs" required>
         <label for="email">Email:</label>
         <input type="email" id="email" name="email" placeholder="someone@example.com" class="contact-inputs" required>
+        <label for="subject">Subject:</label>
+        <input type="text" id="subject" name="subject" placeholder="Subject" class="contact-inputs" required>
         <label for="message">Message:</label>
         <textarea id="message" name="message" class="contact-inputs" required></textarea>
         <button type="submit">Send <img src="assets/submit_arrow.png" alt="arrow icon"></button>
@@ -37,6 +38,8 @@
     </div>
 </div>
 
+<!-- JavaScript file -->
+<script src="js/contact_me.js"></script>
 
 </body>
 </html>
