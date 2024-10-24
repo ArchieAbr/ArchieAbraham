@@ -23,3 +23,64 @@
     margin: 10px 0;
 }
 
+.edu-timeline{
+    position: relative;
+    max-width: 1200px;
+    margin: 100px auto;
+    color: black;
+}
+
+.edu-container{
+    padding: 10px 50px;
+    position: relative;
+    width: 50%;
+}
+
+.edu-textbox{
+    padding: 20px 30px;
+    background: white;
+    border-radius: 6px;
+    font-size: 15px;
+}
+
+.edu-textbox h2{
+    font-weight: 600;
+}
+
+.edu-textbox small{
+    display: inline-block;
+    margin: 15px;
+}
+
+.left{
+    left: 0;
+}
+
+.right{
+    left: 50%;
+}
+
+.edu-container img{
+    position: absolute;
+    width: 10%;
+    border-radius: 50%;
+    right: -35px;
+    top: 32px;
+    z-index: 10;
+}
+
+.right img{
+    left: -24px;
+}
+
+.edu-timeline::after{
+    content: '';
+    position: absolute;
+    width: 6px;
+    height: 100%;
+    background: white;
+    left: 50%;
+    top: 0;
+    margin-left: 3px;
+    z-index: -1;
+}
