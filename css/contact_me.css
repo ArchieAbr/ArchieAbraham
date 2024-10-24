@@ -108,25 +108,25 @@ body {
 
 .social-media-icons {
     display: flex;
-    justify-content: center;  /* Center the icons horizontally */
-    align-items: center;      /* Align the icons vertically */
-    gap: 10px;                /* Reduce the space between the icons */
-    margin-top: 20px;         /* Optional: Add space above the icons */
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    margin-top: 20px;
 }
 
 .icon-container {
     display: flex;
-    justify-content: center;  /* Center the icons in their containers */
-    align-items: center;      /* Vertically center */
-    width: 60px;              /* Icon container size */
-    height: 60px;             /* Icon container size */
+    justify-content: center;
+    align-items: center;
+    width: 60px;
+    height: 60px;
     padding: 5px;
-    border-radius: 50%;       /* Keep the icon container circular */
-    background-color: white;  /* Background color of the circle */
+    border-radius: 50%;
+    background-color: white;
 }
 
 .In-icon, .indeed-icon {
-    width: 200px;              /* Size of the icons */
-    height: auto;             /* Keep the aspect ratio */
+    width: 200px; /* Size of the icons */
+    height: auto; /* Keep the aspect ratio */
 }
 
