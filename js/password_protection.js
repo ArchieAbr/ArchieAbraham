@@ -5,7 +5,7 @@ function createPasswordPrompt() {
     promptDiv.innerHTML = `
         <div id="password-prompt" style="position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: rgba(0, 0, 0, 0.8); display: flex; justify-content: center; align-items: center; z-index: 1000;">
             <div style="background: #fff; padding: 20px; border-radius: 5px; text-align: center; max-width: 300px; width: 100%; color: #333;">
-                <p style="margin-bottom: 10px;">Please enter the password to access this site:</p>
+                <p style="margin-bottom: 10px;">Site under maintenance. Enter password:</p>
                 <input type="password" id="password-input" style="padding: 10px; width: 100%; margin-bottom: 10px; border: 1px solid #ccc; border-radius: 3px;">
                 <button id="submit-password" style="padding: 10px 20px; background: #333; color: #fff; border: none; cursor: pointer;">Submit</button>
             </div>
