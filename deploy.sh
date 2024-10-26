@@ -7,7 +7,7 @@ git checkout gh-pages
 git pull origin gh-pages
 
 # Merge the latest changes from the main branch
-git merge main
+git merge main --no-edit
 
 # Get the current version from a version.txt file (or create it if it doesn't exist)
 VERSION_FILE="version.txt"
