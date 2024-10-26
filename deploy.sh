@@ -1,9 +1,9 @@
 #!/bin/bash
 
-Switch to gh-pages branch
+#Switch to gh-pages branch
 git checkout gh-pages
 
-Pull the latest changes from the remote repository
+#Pull the latest changes from the remote repository
 git pull origin gh-pages
 
 # Merge the latest changes from the main branch
@@ -30,7 +30,7 @@ NEW_VERSION="$MAJOR.$NEW_MINOR"
 # Update version.txt with the new version number
 echo $NEW_VERSION > $VERSION_FILE
 
-# Step 4: Add all files (including version.txt)
+#Add all files (including version.txt)
 git add .
 
 # Step 5: Commit the changes with the version number
