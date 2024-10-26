@@ -10,18 +10,16 @@ git pull origin gh-pages
 git merge main
 
 # Minify CSS and JavaScript files
-# Ensure you have cssnano and terser installed globally, or you can use npx for local execution
-
 echo "Minifying CSS and JavaScript files..."
 
 # Minify CSS
-npx cssnano css/global_styles.css css/global_styles.min.css
-npx cssnano css/index_styles.css css/index_styles.min.css
-npx cssnano css/contact_styles.css css/contact_styles.min.css
+npx --no-install cssnano css/global_styles.css css/global_styles.min.css
+npx --no-install cssnano css/index_styles.css css/index_styles.min.css
+npx --no-install cssnano css/contact_styles.css css/contact_styles.min.css
 
 # Minify JavaScript
-npx terser js/password_protection.js -o js/password_protection.min.js
-npx terser js/form_validation.js -o js/form_validation.min.js
+npx --no-install terser js/password_protection.js -o js/password_protection.min.js
+npx --no-install terser js/form_validation.js -o js/form_validation.min.js
 
 # Get the current version from a version.txt file (or create it if it doesn't exist)
 VERSION_FILE="version.txt"
