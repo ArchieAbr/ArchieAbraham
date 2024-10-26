@@ -1,15 +1,26 @@
 #!/bin/bash
 
-#Switch to gh-pages branch
+# Switch to gh-pages branch
 git checkout gh-pages
 
-#Pull the latest changes from the remote repository
+# Pull the latest changes from the remote repository
 git pull origin gh-pages
 
 # Merge the latest changes from the main branch
 git merge main
 
-#Get the current version from a version.txt file (or create it if it doesn't exist)
+# Minify CSS and JavaScript files
+# Ensure you have cssnano and terser installed globally, or you can use npx for local execution
+
+echo "Minifying CSS and JavaScript files..."
+
+# Minify CSS
+npx cssnano css/global_styles.css css/global_styles.min.css
+
+# Minify JavaScript
+npx terser js/script.js -o js/script.min.js
+
+# Get the current version from a version.txt file (or create it if it doesn't exist)
 VERSION_FILE="version.txt"
 
 if [ ! -f $VERSION_FILE ]; then
@@ -30,16 +41,16 @@ NEW_VERSION="$MAJOR.$NEW_MINOR"
 # Update version.txt with the new version number
 echo $NEW_VERSION > $VERSION_FILE
 
-#Add all files (including version.txt)
+# Add all files (including version.txt and minified files)
 git add .
 
-# Step 5: Commit the changes with the version number
+# Commit the changes with the version number
 git commit -m "Website Deployed (Ver.$NEW_VERSION)"
 
-# Step 6: Push the changes to the gh-pages branch
+# Push the changes to the gh-pages branch
 git push origin gh-pages
 
-# Step 7: Switch back to the main branch
+# Switch back to the main branch
 git checkout main
 
 echo "Website deployed with version $NEW_VERSION"
