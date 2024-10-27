@@ -1,0 +1,43 @@
+name: Update Wiki with Changelog
+
+on:
+  push:
+    branches:
+      - main
+      - gh-pages
+
+jobs:
+  update-wiki:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Checkout the code
+      uses: actions/checkout@v2
+
+    - name: Clean up existing directory
+      run: |
+        rm -rf wiki
+
+    - name: Clone Wiki repository
+      run: |
+        git clone https://x-access-token:${{ secrets.PERSONAL_ACCESS_TOKEN }}@github.com/${{ github.repository }}.wiki.git wiki
+        cd wiki
+
+    - name: Generate Change Log
+      run: |
+        echo "## Changes made on $(date)" >> wiki/Changelog.md
+        echo "### Commit details:" >> wiki/Changelog.md
+        git log -1 --pretty=format:"- %s" >> wiki/Changelog.md
+        echo "" >> wiki/Changelog.md
+        echo "### Files changed:" >> wiki/Changelog.md
+        git diff-tree --no-commit-id --name-only -r HEAD >> wiki/Changelog.md
+        echo "" >> wiki/Changelog.md
+
+    - name: Commit and Push Changes
+      run: |
+        cd wiki
+        git config --global user.name "GitHub Actions"
+        git config --global user.email "actions@github.com"
+        git add Changelog.md
+        git commit -m "Update Changelog on Wiki"
+        git push origin main
