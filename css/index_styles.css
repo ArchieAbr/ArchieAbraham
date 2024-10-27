@@ -89,7 +89,7 @@
     animation: moveline 6s linear forwards;
 }
 
-@keyframes a {
+@keyframes moveline {
     0%{
         height: 0;
     }
