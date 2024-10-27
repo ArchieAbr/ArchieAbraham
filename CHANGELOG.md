@@ -13,3 +13,8 @@
 - Update update_wiki.yml
 ### Files changed:
 
+## Changes made on Sun Oct 27 10:03:25 UTC 2024
+### Commit details:
+- deleted wiki workflow
+### Files changed:
+
