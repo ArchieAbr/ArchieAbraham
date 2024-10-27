@@ -39,7 +39,7 @@ git commit -m "Website Deployed (Ver.$NEW_VERSION)"
 # Push the changes to the gh-pages branch
 git push origin gh-pages
 
-echo "Waiting for 3 seconds before pulling from main..."
+echo "Waiting for 3 seconds before pulling from main and gh-pages..."
 for i in {3..1}
 do
    echo "$i..."
