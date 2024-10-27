@@ -39,6 +39,18 @@ git commit -m "Website Deployed (Ver.$NEW_VERSION)"
 # Push the changes to the gh-pages branch
 git push origin gh-pages
 
+echo "Waiting for 5 seconds before pulling from main..."
+for i in {5..1}
+do
+   echo "$i..."
+   sleep 1
+done
+
+# Pull the latest changes from the main branch
+git pull origin main
+
+git pull origin gh-pages
+
 # Switch back to the main branch
 git checkout main
 
