@@ -6,6 +6,9 @@ on:
       - main
       - gh-pages
 
+permissions:
+  contents: write
+
 jobs:
   document:
     runs-on: ubuntu-latest
@@ -26,8 +29,13 @@ jobs:
 
     - name: Commit and Push Changes
       run: |
-        git config --global user.name "ArchieAbr"
-        git config --global user.email "archiepabraham@gmail.com"
+        git config --global user.name "GitHub Actions"
+        git config --global user.email "actions@github.com"
         git add CHANGELOG.md
-        git commit -m "Update CHANGELOG.md with recent changes"
-        git push origin HEAD
+        if ! git diff-index --quiet HEAD; then
+          git commit -m "Update CHANGELOG.md with recent changes"
+          git push origin HEAD
+        else
+          echo "No changes to commit"
+        fi
+
