@@ -26,6 +26,8 @@ jobs:
 
     - name: Commit and Push Changes
       run: |
+        git config --global user.name "ArchieAbr"
+        git config --global user.email "archiepabraham@gmail.com"
         git add CHANGELOG.md
         git commit -m "Update CHANGELOG.md with recent changes"
         git push origin HEAD
