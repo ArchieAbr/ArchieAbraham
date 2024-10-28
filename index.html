@@ -5,7 +5,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="css/global_styles.css">
     <link rel="stylesheet" href="css/index_styles.css">
-    <script src="js/password_protection.js" defer></script>
     <title>Archie Abraham</title>
 </head>
 <body>
@@ -15,24 +14,49 @@
     <a href="projects.html">Projects</a>
 </div>
 
-<div class="edu-timeline">
-    <ol>
-        <li>
-            <div>
-                <time>2022</time>
-                <p>second schooling experience...</p>
-            </div>
-        </li>
-        <li>
-            <div>
-                <time>2021</time>
-                <p>First schooling experience...</p>
-            </div>
-        </li>
-        <!-- Additional milestones to be added here -->
-    </ol>
+<div class="exp-section">
+    <div class="box left-box" onclick="scrollToSection('education')">
+        <div class="box-content">
+            <h2>Education</h2>
+            <button>Learn More</button>
+        </div>
+    </div>
+    <div class="box right-box" onclick="scrollToSection('professional-experience')">
+        <div class="box-content">
+            <h2>Professional Experience</h2>
+            <button>Discover More</button>
+        </div>
+    </div>
 </div>
 
+<div id="education" class="content-section">
+    <!-- Education details here -->
+    <h2>My Education</h2>
+    <div class="edu-timeline">
+        <ol>
+            <li>
+                <div>
+                    <time>2022</time>
+                    <p>Second schooling experience...</p>
+                </div>
+            </li>
+            <li>
+                <div>
+                    <time>2021</time>
+                    <p>First schooling experience...</p>
+                </div>
+            </li>
+            <!-- Additional milestones -->
+        </ol>
+    </div>
+</div>
 
+<div id="professional-experience" class="content-section">
+    <!-- Professional experience details here -->
+    <h2>My Professional Experience</h2>
+    <!-- Add content -->
+</div>
+
+<script src="js/index.js" defer></script>
 </body>
 </html>
