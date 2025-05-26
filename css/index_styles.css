@@ -9,10 +9,14 @@
     margin-bottom: 20px;
 }
 
-.edu-timeline time {
-    position: absolute;
-    left: -60px; /* Adjust based on actual layout */
-    font-weight: bold;
+.edu-timeline p1 {
+    color: black;
+    background: white;
+    padding: 5px;
+    border-radius: 8px;
+    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.1);
+    display: inline-block;
+    margin-bottom: 8px;
 }
 
 .edu-timeline p {
@@ -94,3 +98,4 @@
     background: #333;
     color: whitesmoke;
 }
+
