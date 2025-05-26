@@ -106,27 +106,42 @@ body {
     transform: translateY(0);
 }
 
-.social-media-icons {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: 10px;
-    margin-top: 20px;
-}
-
-.icon-container {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 60px;
+.contact-footer {
+    position: fixed;
+    left: 0;
+    bottom: 0;
     height: 60px;
-    padding: 5px;
-    border-radius: 50%;
-    background-color: white;
+    width: 100vw;
+    background: rgba(30, 30, 30);
+    color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 18px;
+    padding: 10px 0;
+    padding-left: 10px;
+    z-index: 100;
+    font-size: 16px;
+    letter-spacing: 0.5px;
 }
 
-.In-icon, .indeed-icon {
-    width: 200px; /* Size of the icons */
-    height: auto; /* Keep the aspect ratio */
+.contact-footer .footer-icon {
+    width: 28px;
+    height: 28px;
+    margin: 0 6px;
+    transition: transform 0.2s;
+    vertical-align: middle;
 }
+
+.contact-footer .footer-icon:hover {
+    transform: scale(1.15);
+    filter: brightness(1.2);
+}
+
+.contact-footer .footer-icon[alt="Indeed"] {
+    width: 100px;
+    height: 100px;
+    max-height: 100%;
+}
+
 
