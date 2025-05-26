@@ -1,4 +1,22 @@
 #!/bin/bash
+# Progress bar function
+progress_bar() {
+    local duration=$1
+    local interval=0.1
+    local total_steps=$(echo "$duration / $interval" | bc)
+    local progress=""
+
+    echo -n "["
+    for ((i = 0; i < total_steps; i++)); do
+        progress="${progress}#"
+        echo -ne "\r[${progress}$(printf '%*s' $((total_steps - i - 1)))]"
+        sleep $interval
+    done
+    echo -e "\r[${progress}]"
+}
+
+echo "Waiting for 3 seconds before pulling from main and gh-pages..."
+progress_bar 3
 
 # Switch to gh-pages branch
 git checkout gh-pages
@@ -40,11 +58,7 @@ git commit -m "Website Deployed (Ver.$NEW_VERSION)"
 git push origin gh-pages
 
 echo "Waiting for 3 seconds before pulling from main and gh-pages..."
-for i in {3..1}
-do
-   echo "$i..."
-   sleep 1
-done
+progress_bar 3
 
 # Pull the latest changes from the main branch
 git pull origin main
