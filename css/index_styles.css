@@ -45,6 +45,17 @@
     display: block;
 }
 
+.edu-item ul {
+    list-style-type: disc; /* Adds bullet points */
+    margin: 10px 0; /* Adds spacing around the list */
+    padding-left: 20px; /* Indents the list */
+    text-align: left; /* Aligns text to the left */
+}
+
+.edu-item ul li {
+    margin-bottom: 5px; /* Adds spacing between list items */
+}
+
 .exp-section {
     display: flex;
     justify-content: space-evenly;
